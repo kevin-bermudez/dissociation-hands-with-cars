@@ -6,7 +6,8 @@
 .hide {
   display: none;
 }
-.car {
+.car,
+.car2 {
   width: 50px;
   height: 70px;
   background-color: red;
@@ -15,17 +16,25 @@
   background-image: url("../images/car.jpg");
   background-size: cover;
 }
-.GameArea {
+.GameArea,
+.GameArea2 {
   width: 400px;
   height: 100vh;
   background-color: rgb(29, 26, 26);
   margin: auto;
+  margin-left: 25%;
   position: relative;
   overflow: hidden;
   border-left: 10px dashed white;
   border-right: 10px dashed white;
+  display: inline-block;
+  float: left;
 }
-.lines {
+.GameArea2 {
+  margin-left: 25px;
+}
+.lines,
+.lines2 {
   width: 10px;
   height: 100px;
   background: white;
