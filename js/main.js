@@ -57,10 +57,10 @@ function start() {
   car2.setAttribute("class", "car2");
   gamearea2.appendChild(car2);
 
-  player.x = car.offsetLeft;
+  player.x = car.offsetLeft + 1;
   player.y = car.offsetTop;
 
-  player.x2 = car2.offsetLeft;
+  player.x2 = car2.offsetLeft + 1;
   player.y2 = car2.offsetTop;
 
   for (x = 0; x < 3; x++) {

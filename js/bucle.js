@@ -28,7 +28,6 @@ function gamePlay() {
   let car2 = document.querySelector(".car2");
 
   let road = gamearea.getBoundingClientRect();
-  let road2 = gamearea2.getBoundingClientRect();
 
   if (player.start) {
     //moveLines();
@@ -41,12 +40,14 @@ function gamePlay() {
     if (keys.s && player.y < road.bottom - 70) {
       player.y += player.speedCar;
     }
-    if (keys.a && player.x > 0) {
+    if (keys.a && player.x > -1) {
       player.x -= player.speedCar;
     }
-    if (keys.d && player.x < road.width - 50) {
+    if (keys.d && player.x < road.width - 49) {
       player.x += player.speedCar;
     }
+
+    let road2 = gamearea2.getBoundingClientRect();
 
     if (keys.ArrowUp && player.y2 > road2.top + 70) {
       player.y2 -= player.speedCar;
@@ -54,10 +55,10 @@ function gamePlay() {
     if (keys.ArrowDown && player.y2 < road2.bottom - 70) {
       player.y2 += player.speedCar;
     }
-    if (keys.ArrowLeft && player.x2 > 0) {
+    if (keys.ArrowLeft && player.x2 > -1) {
       player.x2 -= player.speedCar;
     }
-    if (keys.ArrowRight && player.x2 < road2.width - 50) {
+    if (keys.ArrowRight && player.x2 < road2.width - 49) {
       player.x2 += player.speedCar;
     }
 
@@ -66,6 +67,10 @@ function gamePlay() {
 
     car2.style.top = player.y2 + "px";
     car2.style.left = player.x2 + "px";
+
+    if (isCollideWithBorder()) {
+      endGame();
+    }
 
     window.requestAnimationFrame(gamePlay);
     //console.log(player.score++);

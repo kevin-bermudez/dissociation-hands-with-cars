@@ -20,6 +20,18 @@ function isCollide(a, b) {
   );
 }
 
+function isCollideWithBorder() {
+  let road = gamearea.getBoundingClientRect();
+  let road2 = gamearea2.getBoundingClientRect();
+  console.log("player data is", player);
+  return (
+    player.x <= 0 ||
+    player.x >= road.width - 50 ||
+    player.x2 <= 0 ||
+    player.x2 >= road2.width - 50
+  );
+}
+
 function moveCar(car) {
   let other = document.querySelectorAll(".other");
   other.forEach(function (item) {
