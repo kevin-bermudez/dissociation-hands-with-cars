@@ -43,7 +43,7 @@ function gamePlay() {
     if (keys.a && player.x > -1) {
       player.x -= player.speedCar;
     }
-    if (keys.d && player.x < road.width - 49) {
+    if (keys.d) {
       player.x += player.speedCar;
     }
 
@@ -58,7 +58,7 @@ function gamePlay() {
     if (keys.ArrowLeft && player.x2 > -1) {
       player.x2 -= player.speedCar;
     }
-    if (keys.ArrowRight && player.x2 < road2.width - 49) {
+    if (keys.ArrowRight) {
       player.x2 += player.speedCar;
     }
 

@@ -26,9 +26,9 @@ function isCollideWithBorder() {
   console.log("player data is", player);
   return (
     player.x <= 0 ||
-    player.x >= road.width - 50 ||
+    player.x + 50 >= road.width ||
     player.x2 <= 0 ||
-    player.x2 >= road2.width - 50
+    player.x2 + 50 >= road2.width
   );
 }
 
