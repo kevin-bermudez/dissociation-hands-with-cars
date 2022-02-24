@@ -31,7 +31,7 @@ function gamePlay() {
   let road2 = gamearea2.getBoundingClientRect();
 
   if (player.start) {
-    moveLines();
+    //moveLines();
     moveCar(car);
     moveCar(car2);
 
@@ -48,16 +48,16 @@ function gamePlay() {
       player.x += player.speedCar;
     }
 
-    if (keys.ArrowUp && player.y2 > road.top + 70) {
+    if (keys.ArrowUp && player.y2 > road2.top + 70) {
       player.y2 -= player.speedCar;
     }
-    if (keys.ArrowDown && player.y2 < road.bottom - 70) {
+    if (keys.ArrowDown && player.y2 < road2.bottom - 70) {
       player.y2 += player.speedCar;
     }
     if (keys.ArrowLeft && player.x2 > 0) {
       player.x2 -= player.speedCar;
     }
-    if (keys.ArrowRight && player.x2 < road.width - 50) {
+    if (keys.ArrowRight && player.x2 < road2.width - 50) {
       player.x2 += player.speedCar;
     }
 
