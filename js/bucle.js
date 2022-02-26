@@ -30,7 +30,7 @@ function gamePlay() {
   let road = gamearea.getBoundingClientRect();
 
   if (player.start) {
-    //moveLines();
+    moveLines();
     moveCar(car);
     moveCar(car2);
 
